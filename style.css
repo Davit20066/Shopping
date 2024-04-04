@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #E3E7E8;
+    font-family: system-ui;
+}
+.container{
+    width: 800px;
+    margin: auto;
+    transition: 0.5s;
+}
+header{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 50px;
+}
+header .shopping{
+    position: relative;
+    text-align: right;
+}
+header .shopping img{
+    width: 40px;
+    cursor: pointer;
+}
+header .shopping span{
+    padding: 1px 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -5px;
+    left: 80%;
+    border-radius: 50%;
+    color: #fff;
+    background-color: red;
+}
+.list{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.card{
+    width: 350px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    background-color: #453E3B;
+    transition: 0.5s;
+}
+.card h1{
+    height: 80px;
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 600;
+    color: #E8BC0E;
+}
+.card .checkOut{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.card .checkOut div{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #E8BC0E;
+}
+.card .checkOut div:nth-child(2){
+    background-color: #1C1F25;
+    color: #fff;
+}
+.active .card{
+    left: calc(100% - 350px);
+}
+.active .container{
+    transform: translateX(-200px);
+}
+.list .item{
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    background-color: #DCE0E1;
+    box-shadow: 0 50px 50px #757676;
+}
+.list .item img{
+    width: 90%;
+}
+.list .item .title{
+    font-weight: 600;
+}
+.list .item .price{
+    margin: 10px;
+}
+.list .item button{
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #1C1F25;
+}
+.listCard li{
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #fff;
+    row-gap: 10px;
+    margin-bottom: 20px;
+}
+.listCard li div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.listCard li img{
+    width: 90%;
+}
+.listCard button{
+    width: 15px;
+    border: none;
+    background-color: #fff5;
+}
+.listCard .count{
+    margin: 0 10px;
+}
